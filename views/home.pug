@@ -1,0 +1,22 @@
+html
+    head
+    body
+        h1 TOP 10 Crypto
+        table.ui.celled.table.center.aligned
+            thead
+            tr
+                th icon
+                th name
+                th price
+                th market capital
+            tbody
+            each item in top
+                tr
+                td
+                    img(src=item.icon)
+                td #{item.name}
+                td #{item.price}
+                td #{item.market_cap}   
+            tfoot
+            tr
+                th(colspan='6')
