@@ -1,4 +1,4 @@
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 const express = require('express')
 const cheerio = require('cheerio')
 const cheerioTableparser = require('cheerio-tableparser');
@@ -47,4 +47,4 @@ app.get('/', (req,res) => {
 })
 
 
-app.listen(PORT, () => console.log('server running on port ' + PORT))
+app.listen(PORT, () => console.log('server running on PORT ' + PORT))
